@@ -77,6 +77,32 @@ let s:nord3_gui_brightened = [
   \ "#7b88a1",
 \ ]
 
+if exists("g:nord_background")
+	if g:nord_background == "soft"
+		let s:nord0_gui = s:nord0_gui_soft
+	elseif g:nord_background == "medium"
+		let s:nord0_gui = s:nord0_gui_medium
+	elseif g:nord_background == "dark"
+		let s:nord0_gui = s:nord0_gui_dark
+	elseif g:nord_background == "darkest"
+		let s:nord0_gui = s:nord0_gui_darkest
+	else
+		let s:nord0_gui = s:nord0_gui_black
+		let s:nord1_gui = "#1d2021"
+		let s:nord2_gui = "#181818"
+		let s:nord3_gui = "#030303"
+	endif
+else
+	let s:nord0_gui = s:nord0_gui_soft
+endif
+
+if exists("g:nord_background")
+	if g:nord_background == "darkest"
+		let s:nord3_gui = "#202631"
+	endif
+endif
+
+
 if !exists("g:nord_bold")
   let g:nord_bold = 1
 endif
