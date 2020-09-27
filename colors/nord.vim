@@ -18,7 +18,7 @@ set background=dark
 
 let s:nord0_gui_soft = "#2E3440"
 let s:nord0_gui_medium = "#222B3B"
-let s:nord0_gui_dark = "#1f2734"
+let s:nord0_gui_dark = "#1e2430"
 let s:nord0_gui_darkest = "#14171F"
 let s:nord0_gui_black = "#000000"
 
@@ -88,18 +88,12 @@ if exists("g:nord_background")
 		let s:nord0_gui = s:nord0_gui_darkest
 	else
 		let s:nord0_gui = s:nord0_gui_black
-		let s:nord1_gui = "#1d2021"
-		let s:nord2_gui = "#181818"
-		let s:nord3_gui = "#030303"
+		let s:nord1_gui = "#060606"
+		let s:nord2_gui = "#141414"
+		let s:nord3_gui = "#262826"
 	endif
 else
 	let s:nord0_gui = s:nord0_gui_soft
-endif
-
-if exists("g:nord_background")
-	if g:nord_background == "darkest"
-		let s:nord3_gui = "#202631"
-	endif
 endif
 
 
